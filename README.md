@@ -14,14 +14,21 @@ from skopt.space import Real, Integer
 
 
 def f(x: float, mode: int) -> float:
-    # TODO: Continue
-    pass
+    if mode == 1:
+        return x ** 2
+    elif mode == 2:
+        return x ** (1/2)
+    elif mode == 3:
+        return 1.1 - x
+    else:
+        return 1.1 * (x - 1)
 
 spaces = {
     "x": Real(1e-9, 1, prior="log-uniform"),
-    "mode" Integer(1, 4)
+    "mode": Integer(1, 4)
 }
 
+# Expected: mode=3, x=1e-9
 best_params, max_value = bayes_search(
     f,
     spaces,

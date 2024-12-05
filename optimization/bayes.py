@@ -43,7 +43,7 @@ class SearchWrapper:
         if not SearchWrapper.quiet:
             print(f"{{{SearchWrapper.get_params_string(self.params)}}}", end=" ")
 
-        self.computed_value = self.optimized_function(self.params)
+        self.computed_value = SearchWrapper.optimized_function(**self.params)
 
         if not SearchWrapper.quiet:
             print(f"-> {self.computed_value:.5f}")
