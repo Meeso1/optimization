@@ -1,2 +1,0 @@
-scikit-learn==1.5.2
-git+https://github.com/Meeso1/scikit-optimize.git@np-int-fix

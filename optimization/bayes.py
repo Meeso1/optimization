@@ -77,10 +77,10 @@ class NullFoldGenerator:
 
 
 def bayes_search(optimized_function: Callable[[dict[str, Any]], float],
-                         spaces_dict: dict[str, Dimension],
-                         iterations: int,
-                         *,
-                         quiet: bool = False) \
+                spaces_dict: dict[str, Dimension],
+                iterations: int,
+                *,
+                quiet: bool = False) \
         -> tuple[dict[str, Any], float]:
     """
     Perform Bayesian search for function arguments.
