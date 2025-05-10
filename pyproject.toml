@@ -19,5 +19,5 @@ classifiers = [
 requires-python = ">=3.10"
 dependencies = [
     "scikit-learn~=1.5.2",
-    "scikit-optimize @ git+https://github.com/Meeso1/scikit-optimize.git@np-int-fix"
+    "scikit-optimize==0.10.2"
 ]
